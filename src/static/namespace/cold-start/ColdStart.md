@@ -91,7 +91,7 @@
   
 由于可以恢复已删除的记录，incident可能会加载比以前存在的数据更多的数据。
 
-如果发生冷重启，导致出现逐出现象（磁盘或内存高水位标记被破坏），则启动时间可能会打打增加。有关[加速冷重启驱逐](https://discuss.aerospike.com/t/faq-what-options-are-available-to-speed-up-cold-start-eviction/3480)的详细信息，请参阅以下文章。
+如果发生冷重启，导致出现逐出现象（磁盘或内存高水位标记被破坏），则启动时间可能会打打增加。有关 [加速冷重启驱逐](https://discuss.aerospike.com/t/faq-what-options-are-available-to-speed-up-cold-start-eviction/3480) 的详细信息，请参阅以下文章。
 
 如果在冷重启期间驱逐无效（例如，记录未设任何TTL），则可能会违反 `stop-writes-pct` 阈值。在这种情况下，节点将终止并且无法完成启动。
 
