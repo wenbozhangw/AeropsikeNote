@@ -1,7 +1,7 @@
 # Namespace 配置说明
 
 ## 一、配置说明
-| name | default | tag | Introduced | comment|
+| name | default | Subcontext | Introduced | comment|
 | ---- | ---- | ---- | ----| ----|
 | **cold-start-empty**| false | SubContext: storage-engine device | 3.3.21 | 将此设置为 true 将会导致冷启动忽略驱动器上的现有数据，并像空启动一样启动。不影响[快速重启](fast-restart/FastRestart.md)。|
 | ~~cold-start-evict-ttl~~ | 4294967295 |   | Removed : 4.5.1 | 设置 TTL，在此 TTL 以下，在冷启动期间将逐出(不加载)记录。当逐出深度较深时，通常用于加速冷启动。默认值表示 -1。 |

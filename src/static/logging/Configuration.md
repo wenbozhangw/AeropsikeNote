@@ -102,4 +102,4 @@ xdr-client:INFO
 
 - context any detail
 
-有关常用日志消息的详细信息和上下文的完整列表，请参阅[服务器日志消息参考手册](manual/ServerLogMessagesReferenceManual.md)，官方链接地址(Server Log Messages Reference Manual)[https://www.aerospike.com/docs/reference/serverlogmessages/].
+有关常用日志消息的详细信息和上下文的完整列表，请参阅[服务器日志消息参考手册](manual/ServerLogMessagesReferenceManual.md)，官方链接地址 [Server Log Messages Reference Manual](https://www.aerospike.com/docs/reference/serverlogmessages/) .

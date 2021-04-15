@@ -2,7 +2,7 @@
 
 ## 一、配置说明
 
-| name | default | tag | Introduced | comment|
+| name | default | Subcontext | Introduced | comment|
 | ---- | ---- | ---- | ----| ----|
 | **access-address** | service address if specified or list of available IP addresses（服务地址（如果指定）或可用 IP 地址列表） | Subcontext : service | | 访问地址是一个IP地址，它被通知给客户端，并由客户端用于连接到集群。由于 `NAT`，集群节点的访问地址可能与它的 bind addresses 不同（ service 下的 address 配置指令）。如果没有指定，将使用 IP 在（service 下的 address 配置指令）。如果 service address 设置为 `any`，那么 `access-address` 将是所有可用 IP 地址的列表（如果有多个 IP 地址，则不建议这样做）。可以指定多个访问地址。 IPv4，IPv6 和 DNS 名称可用于指定访问地址。DNS名称扩展到所有IP地址，IPv4(A DNS资源记录)和IPv6 (AAAA DNS资源记录)。也可以通过 `alternate-access-address` 指定一组不同的访问地址，例如，对于可能无法通过与本地客户端相同的 IP 地址访问集群的 XDR 客户端。最后，在 EE 3.11 及更高版本中，等效的 TLS 通过 `tls-access-address` 和 `tls-alternate-access-address` 共公开。如果未指定 `access-address`，则 bind addresses (通过 `address` 配置) 将发布给客户端。 <br/> `info` `service-clear-std` 命令将返回节点的访问地址，`peers-clear-std` 命令将返回集群中节点的对等访问地址。可以指定多个访问地址。 <br/> Example : <br/>  `service {` <br/> `----` <br/> `access-address 10.0.0.34` <br/> `access-address 10.0.0.33` <br/> `----` <br/> `}` <br/> 警告：在 3.10 之前的版本中，无法列出多个条目。也不能为那些较早的版本指定 IPv6 和 DNS 条目。如果使用 NAT，则必须在 3.3.26 到 3.10 之间的版本的访问地址配置之后添加 `virtual` 关键字。 | 
 | **address** | any (in config) | Subcontext : service | | 服务器监听客户端连接的 IP 地址。将此值设置为 `any`，以使服务器监听计算机上所有可用的 IP 地址。 使用 `auto-pin` 功能时，将此值设置为接口名称（即：`eth0，eth1`）。 <br/> 警告：对于 3.7.0.1 之前的版本，如果未将 XDR 的本地实例设置为 `any`，则该 XDR 的本地实例将无法连接。 | 
