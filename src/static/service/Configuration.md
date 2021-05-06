@@ -1,4 +1,4 @@
-# mod-lua 配置说明
+# service 配置说明
 
 ## 一、配置说明
 | name | default | Subcontext | Introduced | comment|
