@@ -230,7 +230,7 @@ as_batch_create_thread_queues(uint32_t begin, uint32_t end)
 
 | Name                          | Description                                                  |
 | ----------------------------- | ------------------------------------------------------------ |
-| batch_index_initiate          | 接受的批处理索引请求个数                                     |
+| batch_index_initiate | 接受的批处理索引请求个数 |
 | batch_index_queue             | 每个批处理队列上剩余的批处理索引请求和响应缓冲区的数量。<br />格式: `<q1 requests> :<q1 buffers> ,<q2 requests> :<q2 buffers>,...` |
 | batch_index_complete          | 已完成的批处理索引数量                                       |
 | batch_index_timeout           | 批处理索引请求的超时时间                                     |
@@ -245,18 +245,18 @@ as_batch_create_thread_queues(uint32_t begin, uint32_t end)
 
 | Name                                    | Description                                                  |
 | --------------------------------------- | ------------------------------------------------------------ |
-| <u>batch_sub_proxy_complete</u>         | <u>已完成的代理 batch-index 子任务的数量。</u>               |
-| <u>batch_sub_proxy_error</u>            | <u>失败并发生错误的代理 batch-index 子任务的数量。</u>       |
-| <u>batch_sub_proxy_timeout</u>          | <u>代理的 batch-index 子任务超时的数量。</u>                 |
-| <u>batch_sub_read_error</u>             | <u>因错误而失败的 batch-index 读取子任务数量。</u>           |
-| <u>batch_sub_read_not_found</u>         | <u>找不到结果的 batch-index 读取子任务的数量。</u>           |
-| <u>batch_sub_read_success</u>           | <u>成功的 batch-index 读取子任务的数量。</u>                 |
-| <u>batch_sub_read_timeout</u>           | <u>超时的 batch-index 读取子任务的数量。</u>                 |
-| <u>batch_sub_tsvc_error</u>             | <u>在尝试处理任务之前，由于任务服务中的错误而失败的 batch-index 读取子任务的数量。例如协议错误或安全权限不匹配。</u> |
-| <u>batch_sub_tsvc_timeout</u>           | <u>在尝试处理任务之前，在任务服务中超时的 batch-index 读取子任务的数量。例如协议错误或安全权限不匹配。</u> |
-| <u>retransmit_all_batch_sub_dup_res</u> | <u>正在重复解析的批处理子事务期间发生的重传次数。注意，这包括在客户端和代理节点上发起的重传。</u> |
-| <u>retransmit_batch_sub_dup_res</u>     | <u>正在重复解析的批处理子事务期间发生的重传次数。在 4.5.1.5 版本被替换为`retransmit_all_batch_sub_dup_res`</u> |
-| <u>early_tsvc_batch_sub_error</u>       | <u>在任务早期批处理子任务的错误数。例如，坏的/未知的 命名空间或身份验证错误。</u> |
+| batch_sub_proxy_complete         | 已完成的代理 batch-index 子任务的数量。               |
+| batch_sub_proxy_error            | 失败并发生错误的代理 batch-index 子任务的数量。       |
+| batch_sub_proxy_timeout          | 代理的 batch-index 子任务超时的数量。                 |
+| batch_sub_read_error             | 因错误而失败的 batch-index 读取子任务数量。           |
+| batch_sub_read_not_found         | 找不到结果的 batch-index 读取子任务的数量。           |
+| batch_sub_read_success           | 成功的 batch-index 读取子任务的数量。                 |
+| batch_sub_read_timeout           | 超时的 batch-index 读取子任务的数量。                 |
+| batch_sub_tsvc_error             | 在尝试处理任务之前，由于任务服务中的错误而失败的 batch-index 读取子任务的数量。例如协议错误或安全权限不匹配。 |
+| batch_sub_tsvc_timeout           | 在尝试处理任务之前，在任务服务中超时的 batch-index 读取子任务的数量。例如协议错误或安全权限不匹配。 |
+| retransmit_all_batch_sub_dup_res | 正在重复解析的批处理子事务期间发生的重传次数。注意，这包括在客户端和代理节点上发起的重传。 |
+| retransmit_batch_sub_dup_res     | 正在重复解析的批处理子事务期间发生的重传次数。在 4.5.1.5 版本被替换为`retransmit_all_batch_sub_dup_res` |
+| early_tsvc_batch_sub_error       | 在任务早期批处理子任务的错误数。例如，坏的/未知的 命名空间或身份验证错误。 |
 
 ###### Batch Direct
 
@@ -292,10 +292,10 @@ Aerospike使用直接的底层数据库读取方式实现 batch direct 协议。
 | ----------------------- | ----------------------------------------------- |
 | batch_initiate          | 收到的 batch direct 请求数量。                  |
 | batch_queue             | 队列中剩余的等待处理的 batch direct请求数量。   |
-| <u>batch_tree_count</u> | <u>所有的 batch direct 请求的tree查找数量。</u> |
+| batch_tree_count | 所有的 batch direct 请求的tree查找数量。 |
 | batch_timeout           | batch direct请求超时的数量。                    |
 | batch_errors            | 因错误而被拒绝的 batch direct 请求的数量。      |
-| <u>batch_q_process</u>  | <u>batch direct 性能直方图。</u>                |
+| batch_q_process  | batch direct 性能直方图。                |
 
 ##### known limitations
 
